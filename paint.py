@@ -126,5 +126,7 @@ for i, button_info in enumerate(buttons):
     button_widgets.append(button)
     button.bind("<Button-1>", lambda event, mode=button_info["mode"]: on_button_click(mode))
     button.place(x=10, y=10 + i * 60)  
+color_button = customtkinter.CTkButton(canvas, text="Select Color", command=choose_color)
+color_button.place(x=10, y=80 + len(buttons) * 60) 
 
 root.mainloop()
